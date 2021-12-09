@@ -1,5 +1,5 @@
-.wrapper {
-  margin: 200px auto;
+.burger-wrapper {
+  margin: 50px auto;
   width: 300px;
   background-color: var(--wrapper-background-color);
   position: relative;
@@ -13,7 +13,7 @@
   height: 40px;
 }
 
-label {
+.burger-label {
   display: block;
   position: absolute;
   top: 0;
@@ -25,7 +25,7 @@ label {
   line-height: 40px;
 }
 
-.burgerline {
+.burger-line {
   position: absolute;
   top: 8px;
   right: 10px;
