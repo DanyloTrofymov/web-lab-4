@@ -1,7 +1,7 @@
 .btn-menu {
   color: var(--light-color);
   background-color: var(--btn-menu-color);
-  padding: 7px;
+  padding: 6px;
   position: fixed;
   top: 1%;
   right: 2%;
@@ -15,7 +15,7 @@
 
 .btn-menu span {
   display: block;
-  height: 2px;
+  height: 3px;
   background-color: var(--light-color);
   margin: 5px 0 0;
   transition: all 0.1s linear 0.23s;
