@@ -5,6 +5,7 @@
     "node": true
   },
   "extends": ["plugin:sonarjs/recommended", "metarhia"],
+  "plugin": ["sonarjs"],
   "parserOptions": {
     "ecmaVersion": 13,
     "sourceType": "module"

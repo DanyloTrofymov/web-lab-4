@@ -9,18 +9,20 @@
 
   <body>
     <div class="burger-wrapper">
-      <input type="checkbox" id="menu" />
-      <label class="burger-label" for="menu">Меню</label>
-      <div class="burger-line home"></div>
-      <div class="burger-line products"></div>
-      <div class="burger-line about"></div>
-      <div class="burger-line contact"></div>
-      <nav class="main">
-        <a href="#">Home</a>
-        <a href="#">Products</a>
-        <a href="#">About us</a>
-        <a href="#">Contact</a>
-      </nav>
+      <input type="checkbox" id="hmt" class="hidden-menu-ticker" />
+
+      <label for="hmt" class="btn-menu">
+        <span class="first"></span>
+        <span class="second"></span>
+        <span class="third"></span>
+      </label>
+
+      <ul class="hidden-menu">
+        <li><a href="">Main</a></li>
+        <li><a href="">Galery</a></li>
+        <li><a href="">Contacts</a></li>
+        <li><a href="">About us</a></li>
+      </ul>
     </div>
     <div class="slider middle">
       <div class="slides">
@@ -33,13 +35,12 @@
         <div class="slide"><img src="./src/2.jpg" alt="" /></div>
         <div class="slide"><img src="./src/3.jpg" alt="" /></div>
         <div class="slide"><img src="./src/4.jpg" alt="" /></div>
-      </div>
-
-      <div class="navigation">
-        <label for="r1" class="bar"></label>
-        <label for="r2" class="bar"></label>
-        <label for="r3" class="bar"></label>
-        <label for="r4" class="bar"></label>
+        <div class="navigation">
+          <label for="r1" class="bar"></label>
+          <label for="r2" class="bar"></label>
+          <label for="r3" class="bar"></label>
+          <label for="r4" class="bar"></label>
+        </div>
       </div>
     </div>
   </body>
