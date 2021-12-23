@@ -6,19 +6,19 @@
   top: 1%;
   right: 2%;
   cursor: pointer;
-  transition: right .23s;
+  transition: right 0.23s;
   width: 30px;
-  height: 20px;
+  height: 30px;
   transform: translateZ(0);
   backface-visibility: hidden;
 }
 
 .btn-menu span {
   display: block;
-  height: 3px;
+  height: 2px;
   background-color: var(--light-color);
-  margin: 5px 0 0 0;
-  transition: all .1s linear .23s;
+  margin: 5px 0 0;
+  transition: all 0.1s linear 0.23s;
   position: relative;
 }
 
@@ -32,12 +32,12 @@
   padding: 0 5px;
   margin: 0;
   box-sizing: border-box;
-  width:  20%;
+  width: 20%;
   background-color: var(--btn-menu-color);
   height: 100%;
   top: 0;
   right: -20%;
-  transition: right .2s;
+  transition: right 0.2s;
   z-index: 200;
   transform: translateZ(0);
   backface-visibility: hidden;
@@ -66,24 +66,24 @@
   margin-top: 0;
 }
 
-.hidden-menu-ticker:checked~.btn-menu {
+.hidden-menu-ticker:checked ~ .btn-menu {
   right: 20%;
 }
 
-.hidden-menu-ticker:checked~.hidden-menu{
+.hidden-menu-ticker:checked ~ .hidden-menu {
   right: 0;
 }
 
-.hidden-menu-ticker:checked~.btn-menu span.first {
+.hidden-menu-ticker:checked ~ .btn-menu span.first {
   transform: rotate(45deg);
   top: 8px;
 }
 
-.hidden-menu-ticker:checked~.btn-menu span.second {
+.hidden-menu-ticker:checked ~ .btn-menu span.second {
   opacity: 0;
 }
 
-.hidden-menu-ticker:checked~.btn-menu span.third {
+.hidden-menu-ticker:checked ~ .btn-menu span.third {
   transform: rotate(-45deg);
   top: -8px;
 }
@@ -93,7 +93,8 @@
     width: 80%;
     right: -80%;
   }
-  .hidden-menu-ticker:checked~.btn-menu {
+
+  .hidden-menu-ticker:checked ~ .btn-menu {
     right: 80%;
   }
 }

@@ -72,19 +72,22 @@ input[name="r"] {
   margin-left: -75%;
 }
 
-#r1:checked ~ .navigation .bar[for='r1']{
+#r1:checked ~ .navigation .bar[for="r1"] {
   opacity: 1;
   transform: scale(1.2);
 }
-#r2:checked ~ .navigation .bar[for='r2']{
+
+#r2:checked ~ .navigation .bar[for="r2"] {
   opacity: 1;
   transform: scale(1.2);
 }
-#r3:checked ~ .navigation .bar[for='r3']{
+
+#r3:checked ~ .navigation .bar[for="r3"] {
   opacity: 1;
   transform: scale(1.2);
 }
-#r4:checked ~ .navigation .bar[for='r4']{
+
+#r4:checked ~ .navigation .bar[for="r4"] {
   opacity: 1;
   transform: scale(1.2);
 }
