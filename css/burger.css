@@ -1,100 +1,99 @@
-.btn-menu {
+.burger-wrapper nav a {
+  padding: 12px 24px;
   color: var(--light-color);
-  background-color: var(--btn-menu-color);
-  padding: 6px;
-  position: fixed;
-  top: 1%;
-  right: 2%;
-  cursor: pointer;
-  transition: right 0.23s;
-  width: 30px;
-  height: 30px;
-  transform: translateZ(0);
-  backface-visibility: hidden;
-}
-
-.btn-menu span {
-  display: block;
-  height: 3px;
-  background-color: var(--light-color);
-  margin: 5px 0 0;
-  transition: all 0.1s linear 0.23s;
-  position: relative;
-}
-
-.hidden-menu {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  position: fixed;
-  list-style: none;
-  padding: 0 5px;
-  margin: 0;
-  box-sizing: border-box;
-  width: 20%;
-  background-color: var(--btn-menu-color);
-  height: 100%;
-  top: 0;
-  right: -20%;
-  transition: right 0.2s;
-  z-index: 200;
-  transform: translateZ(0);
-  backface-visibility: hidden;
-}
-
-.hidden-menu li {
-  margin-bottom: 20px;
-  padding: 10px 0;
-}
-
-.hidden-menu li a {
+  font-size: 20px;
+  font-weight: 600;
   text-decoration: none;
-  font-size: 30px;
-  color: var(--light-color);
+  transition-duration: 0.1s;
 }
 
-.hidden-menu li a:hover {
-  text-decoration: underline;
+.burger-wrapper nav a:hover {
+  background-color: rgb(0 0 0 / 30%);
 }
 
-.hidden-menu-ticker {
-  display: none;
-}
-
-.btn-menu span.first {
-  margin-top: 0;
-}
-
-.hidden-menu-ticker:checked ~ .btn-menu {
-  right: 20%;
-}
-
-.hidden-menu-ticker:checked ~ .hidden-menu {
+#burger-wrapper-toggle {
+  position: absolute;
+  opacity: 0;
   right: 0;
 }
 
-.hidden-menu-ticker:checked ~ .btn-menu span.first {
-  transform: rotate(45deg);
-  top: 8px;
+/* Click on content co close menu */
+#burger-wrapper-toggle:checked {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  z-index: 2;
 }
 
-.hidden-menu-ticker:checked ~ .btn-menu span.second {
-  opacity: 0;
-}
-
-.hidden-menu-ticker:checked ~ .btn-menu span.third {
-  transform: rotate(-45deg);
+label[for="burger-wrapper-toggle"] > span::before {
+  content: "";
   top: -8px;
 }
 
-@media (max-width: 425px) {
-  .hidden-menu {
-    width: 80%;
-    right: -80%;
-  }
+label[for="burger-wrapper-toggle"] > span::after {
+  content: "";
+  top: 8px;
+}
 
-  .hidden-menu-ticker:checked ~ .btn-menu {
-    right: 80%;
-  }
+label[for="burger-wrapper-toggle"] {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 25px;
+  right: 25px;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+label[for="burger-wrapper-toggle"] > span,
+label[for="burger-wrapper-toggle"] > span::before,
+label[for="burger-wrapper-toggle"] > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: var(--btn-menu-color);
+  transition-duration: 0.5s;
+}
+
+#burger-wrapper-toggle:checked ~ label[for="burger-wrapper-toggle"] > span {
+  z-index: 1;
+  background-color: var(--light-color);
+  transform: rotate(45deg);
+}
+
+#burger-wrapper-toggle:checked ~ label[for="burger-wrapper-toggle"] > span::before {
+  top: 0;
+  z-index: 1;
+  transform: rotate(90deg);
+  background-color: var(--light-color);
+}
+
+#burger-wrapper-toggle:checked ~ label[for="menu-toggle"] > span::after {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.burger-wrapper nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  right: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  background-color: var(--btn-menu-color);
+  transition-duration: 0.25s;
+  z-index: 2;
+}
+
+#burger-wrapper-toggle:checked ~ nav {
+  visibility: visible;
+  right: 0;
 }
